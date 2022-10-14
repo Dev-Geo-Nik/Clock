@@ -1,0 +1,21 @@
+.home {
+	min-height: 100vh;
+	position: relative;
+}
+
+.bg_image {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-size: cover;
+}
+
+.day_image {
+	background-image: url("../../assets/img/desktop/bg-image-daytime.jpg");
+}
+.night_image {
+	background-image: url("../../assets/img/desktop/bg-image-nighttime.jpg");
+}
