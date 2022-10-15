@@ -1,0 +1,49 @@
+.extra_details_container {
+	display: grid;
+	background-color: red;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(2, 1fr);
+	height: 40rem;
+	margin-top: 5.6rem;
+}
+
+.day_theme {
+	background-color: var(--clr-modal_day);
+	color: #303030;
+}
+.night_theme {
+	background-color: var(--clr-modal_night);
+	color: #fff;
+}
+.time_container {
+	margin-top: 7.5rem;
+	margin-left: 18%;
+	max-height: 25rem;
+	// background-color: palegreen;
+	border-right: 1px solid #3030304d;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.week_container {
+	margin-top: 7.5rem;
+	// background-color: azure;
+	max-height: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 9.4rem;
+}
+
+.header {
+	font-size: var(--fs-200);
+	line-height: 28px;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+}
+
+.value {
+	font-weight: 800;
+	font-size: var(--fs-800);
+}

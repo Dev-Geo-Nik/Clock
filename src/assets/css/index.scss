@@ -9,10 +9,15 @@ html {
 	--clr-primary-2: #303030;
 	--clr-primary-3: #ffffff;
 
-	--clr-text: hsl(200, 15%, 8%);
+	--clr-text: #fff;
 	--clr-body-bg: hsl(0, 0%, 98%);
 	--clr-bg: #fff;
 
+	--clr-btn-text: rgba(0, 0, 0, 0.5);
+	--clr-btn-bg: #fff;
+	--clr-arrow-bg: #303030;
+	--clr-modal_day: rgba(255, 255, 255, 0.75);
+	--clr-modal_night: rgba(0, 0, 0, 0.75);
 	// icons
 	--clr-moon: hsl(0, 0%, 98%);
 	--clr-search: #848484;
@@ -20,13 +25,16 @@ html {
 	--clr-span: #000;
 	--clr-links: rgb(41, 119, 236);
 
-	// --fs-800: 3.2rem;
-	// --fs-700: 2.4rem;
-	// --fs-600: 1.8rem;
-	// --fs-500: 1.6rem;
-
-	// 14px for the base body text
+	--fs-900: 20rem;
+	--fs-800: 5.6rem;
+	--fs-700: 4rem;
+	--fs-600: 2.4rem;
+	// 20px
+	--fs-500: 2rem;
+	// 18px for the base body text
 	--fs-400: 1.8rem;
+	--fs-300: 1.6rem;
+	--fs-200: 1.5rem;
 
 	--fs-400-t: 1.6rem;
 
@@ -34,7 +42,6 @@ html {
 	// --fs-600-s: 1.4rem;
 	// --fs-400-s: 1.2rem;
 	--box-shadow-1: 0 3px 8px rgba(0, 0, 0, 0.1);
-
 	--ff-normal: "Inter", sans-serif;
 }
 /*****************         Resets             **************************/

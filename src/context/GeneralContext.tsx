@@ -6,12 +6,14 @@ export interface GeneralContextState {
 	quote: any;
 	ipData: any;
 	timeData: any;
+	isModalOpen: boolean;
 }
 
 const initialState: GeneralContextState = {
 	quote: "",
 	ipData: null,
 	timeData: null,
+	isModalOpen: false,
 };
 
 type ContextHook = () => {

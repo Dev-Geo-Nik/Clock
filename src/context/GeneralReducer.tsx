@@ -14,6 +14,16 @@ export const reducer: ReducerType = (state, action) => {
 				ipData: action.payload.geolocationData,
 				timeData: action.payload.timeData,
 			};
+		case ActionTypes.FETCH_NEW_QUOTE:
+			return {
+				...state,
+				quote: action.payload,
+			};
+		case ActionTypes.IS_MODAL_OPEN:
+			return {
+				...state,
+				isModalOpen: action.payload,
+			};
 
 		default:
 			return state;

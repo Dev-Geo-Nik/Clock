@@ -15,6 +15,7 @@
 
 .day_image {
 	background-image: url("../../assets/img/desktop/bg-image-daytime.jpg");
+	filter: brightness(65%);
 }
 .night_image {
 	background-image: url("../../assets/img/desktop/bg-image-nighttime.jpg");

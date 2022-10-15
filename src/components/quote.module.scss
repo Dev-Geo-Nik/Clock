@@ -2,8 +2,32 @@
 	// color: red;
 }
 
+.quote_text_container {
+	display: flex;
+	align-items: center;
+	// background-color: red;
+}
+.quote_text {
+	color: var(--clr-text);
+	padding-top: 5.5rem;
+	margin-left: 11.5%;
+	max-width: 54rem;
+}
+
 .quote_icon {
-	width: 5rem;
-	background-color: red;
-	color: red;
+	width: 1.7rem;
+	margin-left: 1.5rem;
+	padding-top: 5.5rem;
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.quote_icon:hover {
+	transform: scale(1.1);
+}
+
+.quote_author {
+	margin: 1.2rem 0 0 11.5%;
+	font-weight: 800;
+	color: var(--clr-text);
 }
