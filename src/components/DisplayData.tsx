@@ -11,7 +11,6 @@ interface Props {
 }
 
 const DisplayData: React.FC<Props> = ({ isDayTime, ipData, timeData }) => {
-	// let displayIcon =
 	const {
 		state: { isModalOpen },
 		dispatch,
@@ -22,13 +21,17 @@ const DisplayData: React.FC<Props> = ({ isDayTime, ipData, timeData }) => {
 	};
 
 	const timeNow = new Date();
-	const currentTime = timeNow.getHours() + ":" + timeNow.getMinutes();
+	const minutes = String(timeNow.getMinutes()).length > 1 ? timeNow.getMinutes() : "0" + timeNow.getMinutes();
+	const currentTime = timeNow.getHours() + ":" + minutes;
 	const zone = timeNow.toLocaleTimeString("default").includes("AM") ? "AM" : "PM";
+
 	return (
 		<section className={isModalOpen ? `${styles.text_context_container} ${styles.modal_open} ` : `${styles.text_context_container} ${styles.night_theme} `}>
-			<div className={styles.day_message_container}>
-				<img src={DayIcon} alt="" className={styles.icon} />
-				<p className={styles.header}>Have a nice day, IT's Currently</p>
+			<div className={styles.message_container}>
+				<img src={isDayTime ? DayIcon : NightIcon} alt="" className={styles.icon} />
+				<p className={styles.header}>
+					{isDayTime ? "Have a nice day" : "Have a nice night"} <span className={styles.current_message}>, IT's Currently</span>
+				</p>
 			</div>
 			<p className={styles.time_text}>
 				{currentTime}
@@ -39,7 +42,8 @@ const DisplayData: React.FC<Props> = ({ isDayTime, ipData, timeData }) => {
 					{ipData?.city}, {ipData?.country}
 				</p>
 				<div className={styles.btn_container} onClick={handleClick}>
-					<span className={styles.btn_text}>More</span> <img src={ArrowDownIcon} className={styles.arrow_icon} alt="" />
+					<span className={styles.btn_text}>{isModalOpen ? "Less" : "More"}</span>{" "}
+					<img src={ArrowDownIcon} className={isModalOpen ? `${styles.arrow_icon} ${styles.arrow_rotate}` : `${styles.arrow_icon} `} alt="" />
 				</div>
 			</div>
 		</section>

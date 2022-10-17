@@ -36,11 +36,6 @@ html {
 	--fs-300: 1.6rem;
 	--fs-200: 1.5rem;
 
-	--fs-400-t: 1.6rem;
-
-	// Smartphone
-	// --fs-600-s: 1.4rem;
-	// --fs-400-s: 1.2rem;
 	--box-shadow-1: 0 3px 8px rgba(0, 0, 0, 0.1);
 	--ff-normal: "Inter", sans-serif;
 }
@@ -230,10 +225,31 @@ select {
 // / 760px 1024px
 @media (max-width: 64em) {
 }
-// 481px - 750px
-@media (min-width: 30.1em) and (max-width: 46.875em) {
+// 481px -  1024px
+@media (min-width: 30.1em) and (max-width: 64em) {
+	:root {
+		// Tablet
+		--fs-900-t: 17.5rem;
+		--fs-800-t: 4rem;
+		--fs-700-t: 3.2rem;
+		--fs-600-t: 1.8rem;
+		--fs-500-t: 1.8rem;
+		--fs-200-t: 1.3rem;
+	}
 }
 
 // 375 -480px
 @media (max-width: 30em) {
+	:root {
+		// Smartphone
+		--fs-900-s: 10rem;
+		--fs-800-s: 2rem;
+		--fs-700-s: 1.5rem;
+		--fs-400-s: 1.2rem;
+		--fs-200-s: 1rem;
+	}
+}
+
+// 481px - 750px
+@media (min-width: 30.1em) and (max-width: 46.875em) {
 }

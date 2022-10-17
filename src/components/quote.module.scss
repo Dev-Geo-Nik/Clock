@@ -31,3 +31,33 @@
 	font-weight: 800;
 	color: var(--clr-text);
 }
+
+// / 760px 1024px
+@media (max-width: 64em) {
+	.quote_text {
+		padding-top: 8rem;
+	}
+
+	.quote_icon {
+		padding-top: 8rem;
+	}
+}
+
+// 375 -480px
+@media (max-width: 30em) {
+	.quote_text {
+		padding-top: 3rem;
+		margin-left: 8%;
+		max-width: 70%;
+		font-size: var(--fs-400-s);
+	}
+
+	.quote_icon {
+		padding-top: 3rem;
+	}
+
+	.quote_author {
+		margin: 1rem 0 0 8%;
+		font-size: var(--fs-400-s);
+	}
+}

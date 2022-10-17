@@ -7,7 +7,7 @@ const DataManager: React.FC = () => {
 	const { dispatch } = useGeneralContext();
 	useEffect(() => {
 		const fetchAnyApiCalls = async () => {
-			const urls = ["https://programming-quotes-api.herokuapp.com/Quotes/random", "http://ip-api.com/json/"];
+			const urls = ["https://programming-quotes-api.herokuapp.com/Quotes/random", "https://ip-api.com/json/"];
 			try {
 				const response = await Promise.all(urls.map((url) => fetch(url).then((res) => res.json())));
 				const res = await fetch(`http://worldtimeapi.org/api/timezone/${response[1].timezone}`);

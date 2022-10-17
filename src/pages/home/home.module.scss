@@ -1,5 +1,6 @@
 .home {
 	min-height: 100vh;
+
 	position: relative;
 }
 
@@ -13,10 +14,39 @@
 	background-size: cover;
 }
 
+.wrapper {
+	// background-color: red;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .day_image {
+	background-size: cover;
 	background-image: url("../../assets/img/desktop/bg-image-daytime.jpg");
 	filter: brightness(65%);
 }
 .night_image {
 	background-image: url("../../assets/img/desktop/bg-image-nighttime.jpg");
+}
+
+// / 760px 1024px
+@media (max-width: 64em) {
+	.day_image {
+		background-image: url("../../assets/img/tablet/bg-image-daytime.jpg");
+	}
+	.night_image {
+		background-image: url("../../assets/img/tablet/bg-image-nighttime.jpg");
+	}
+}
+
+// 375 -480px
+@media (max-width: 30em) {
+	.day_image {
+		background-image: url("../../assets/img/mobile/bg-image-daytime.jpg");
+	}
+	.night_image {
+		background-image: url("../../assets/img/mobile/bg-image-nighttime.jpg");
+	}
 }

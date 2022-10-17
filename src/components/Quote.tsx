@@ -16,6 +16,7 @@ const Quote: React.FC = () => {
 			dispatch({ type: ActionTypes.FETCH_NEW_QUOTE, payload: data });
 		} catch (error) {}
 	};
+
 	return (
 		<div className={styles.quote_container}>
 			<div className={styles.quote_text_container}>

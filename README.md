@@ -1,23 +1,23 @@
 #  Clock App 
 
-<!-- ## For live preview click  <strong>[here](https://marco-polo-portfolio-app.netlify.app/)</strong> 
+## For live preview click  <strong>[here](https://marco-polo-portfolio-app.netlify.app/)</strong> 
 
 
 
 
 
-## Desktop design overview home page
-![Desktop design overview](./src/assets/img/home.png "")
+## Desktop design overview Home 1440px 
+![Desktop design overview](./src/assets/img/final/home.png "")
 
 
 
 
-## Tablet design overview  single page dark mode on
-![Desktop design overview](./src/assets/img/single.png "")
+## Tablet design overview  Home 760px 
+![Desktop design overview](./src/assets/img/final/tablet.png "")
 
 
-## Mobile design overview  mobile single page
-![Desktop design overview](./src/assets/img/mobile.png "")
+## Mobile design overview  Home 375px
+![Desktop design overview](./src/assets/img/final/mobile.png "")
 
 ## Development setup
 1. Clone the repo
@@ -25,7 +25,7 @@
 3. npm run start
 
 
-##  About Space Tourism
+##  About Clock App
 > This project is a front mentor challenge ( [Front Mentor link ](https://www.frontendmentor.io/home))
 
 
@@ -36,10 +36,12 @@
 1. TYPESCRIPT
 1. REACT.JS
 
-## Backend API "Rest Countries"
- Rest countries api link: <strong>[here](https://gitlab.com/amatos/rest-countries)</strong> 
+## Backend APIS
+ Geolocation  Api link: <strong>[here](https://ip-api.com/)</strong> 
+ Quotes  Api link: <strong>[here](https://programming-quotes-api.herokuapp.com/index.html)</strong> 
+ Time Api link:<strong>[here](http://worldtimeapi.org/)</strong> 
 
 
 
 
- -->
+

@@ -11,7 +11,7 @@ const Home: React.FC = () => {
 		dispatch,
 		state: { ipData, quote, timeData, isModalOpen },
 	} = useGeneralContext();
-	console.log(isModalOpen);
+	// console.log(isModalOpen);
 	let displayBackground;
 	let isDayTime = null;
 	if (timeData) {
@@ -22,15 +22,16 @@ const Home: React.FC = () => {
 		displayBackground = isDayTime ? <div className={`${styles.day_image} ${styles.bg_image}`}></div> : <div className={`${styles.night_image}  ${styles.bg_image}`}></div>;
 	}
 
-	// console.log(timeData);
-
 	return (
 		<>
 			<DataManager />
 			<section className={styles.home}>
 				{displayBackground}
-				{isModalOpen ? null : <Quote />}
-				<DisplayData isDayTime={isDayTime} ipData={ipData} timeData={timeData} />
+				{/* control the children with wrapper class */}
+				<div className={styles.wrapper}>
+					{!isModalOpen && <Quote />}
+					<DisplayData isDayTime={isDayTime} ipData={ipData} timeData={timeData} />
+				</div>
 				{isModalOpen && <ExtraDetails isDayTime={isDayTime} />}
 			</section>
 		</>

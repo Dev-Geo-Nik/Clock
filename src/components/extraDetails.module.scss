@@ -1,10 +1,13 @@
 .extra_details_container {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
 	display: grid;
-	background-color: red;
 	grid-auto-flow: column;
 	grid-template-columns: repeat(2, 1fr);
 	height: 40rem;
-	margin-top: 5.6rem;
+	padding-left: 11.5%;
 }
 
 .day_theme {
@@ -17,9 +20,7 @@
 }
 .time_container {
 	margin-top: 7.5rem;
-	margin-left: 18%;
 	max-height: 25rem;
-	// background-color: palegreen;
 	border-right: 1px solid #3030304d;
 	display: flex;
 	flex-direction: column;
@@ -28,12 +29,11 @@
 
 .week_container {
 	margin-top: 7.5rem;
-	// background-color: azure;
 	max-height: 25rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-left: 9.4rem;
+	padding-left: 12%;
 }
 
 .header {
@@ -46,4 +46,92 @@
 .value {
 	font-weight: 800;
 	font-size: var(--fs-800);
+}
+
+// / 760px 1024px
+@media (max-width: 64em) {
+	.extra_details_container {
+		display: grid;
+		// background-color: red;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(2, 1fr);
+		height: 44rem;
+	}
+
+	.header {
+		font-size: var(--fs-200-t);
+		letter-spacing: 0.2.6rem;
+	}
+
+	.value {
+		font-size: var(--fs-800-t);
+	}
+
+	.time_container {
+		margin-top: 11rem;
+		max-height: 25rem;
+		justify-content: flex-start;
+		border-right: none;
+	}
+
+	.week_container {
+		margin-top: 11rem;
+		max-height: 25rem;
+		justify-content: flex-start;
+		padding-left: 12%;
+	}
+
+	.time_container :nth-child(2) {
+		margin-bottom: 5rem;
+	}
+	.week_container :nth-child(2) {
+		margin-bottom: 5rem;
+	}
+}
+
+// 375 -480px
+@media (max-width: 30em) {
+	.extra_details_container {
+		display: grid;
+		grid-auto-flow: row;
+
+		grid-template-columns: 1fr;
+		height: 25rem;
+	}
+
+	.group {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 2rem;
+	}
+	.header {
+		font-size: var(--fs-200-s);
+		letter-spacing: 0.2.6rem;
+		display: inline-block;
+	}
+
+	.value {
+		font-size: var(--fs-800-s);
+		display: inline-block;
+	}
+
+	.time_container {
+		margin-top: 5rem;
+		height: 5rem;
+		display: block;
+	}
+
+	.week_container {
+		margin-top: 0rem;
+		height: 10rem;
+		display: block;
+		padding-left: 0;
+	}
+
+	.time_container :nth-child(2) {
+		margin-bottom: 0;
+	}
+	.week_container :nth-child(2) {
+		margin-bottom: 0;
+	}
 }
