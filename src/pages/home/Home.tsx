@@ -9,18 +9,15 @@ import ExtraDetails from "../../components/ExtraDetails";
 const Home: React.FC = () => {
 	const {
 		dispatch,
-		state: { ipData, quote, timeData, isModalOpen },
+		state: { ipData, isModalOpen },
 	} = useGeneralContext();
-	// console.log(isModalOpen);
+
 	let displayBackground;
 	let isDayTime = null;
-	if (timeData) {
-		// We build the time from the unixtime
-		const time = new Date(timeData.unixtime * 1000).getHours();
-		// We check if the time is day then we display the day div else the night background image div
-		isDayTime = time > 6 && time < 20;
-		displayBackground = isDayTime ? <div className={`${styles.day_image} ${styles.bg_image}`}></div> : <div className={`${styles.night_image}  ${styles.bg_image}`}></div>;
-	}
+	const time = new Date().getHours();
+
+	isDayTime = time > 6 && time < 20;
+	displayBackground = isDayTime ? <div className={`${styles.day_image} ${styles.bg_image}`}></div> : <div className={`${styles.night_image}  ${styles.bg_image}`}></div>;
 
 	return (
 		<>
@@ -30,7 +27,7 @@ const Home: React.FC = () => {
 				{/* control the children with wrapper class */}
 				<div className={styles.wrapper}>
 					{!isModalOpen && <Quote />}
-					<DisplayData isDayTime={isDayTime} ipData={ipData} timeData={timeData} />
+					<DisplayData isDayTime={isDayTime} ipData={ipData} />
 				</div>
 				{isModalOpen && <ExtraDetails isDayTime={isDayTime} />}
 			</section>

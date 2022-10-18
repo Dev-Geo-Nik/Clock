@@ -1,6 +1,6 @@
 #  Clock App 
 
-## For live preview click  <strong>[here](https://marco-polo-portfolio-app.netlify.app/)</strong> 
+## For live preview click  <strong>[here](https://clock-portfolio-project.netlify.app/)</strong> 
 
 
 
@@ -37,9 +37,9 @@
 1. REACT.JS
 
 ## Backend APIS
- Geolocation  Api link: <strong>[here](https://ip-api.com/)</strong> 
+ Geolocation  Api link: <strong>[here](https://geolocation-db.com/json/)</strong> 
  Quotes  Api link: <strong>[here](https://programming-quotes-api.herokuapp.com/index.html)</strong> 
- Time Api link:<strong>[here](http://worldtimeapi.org/)</strong> 
+
 
 
 

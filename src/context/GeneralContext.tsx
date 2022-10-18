@@ -7,6 +7,7 @@ export interface GeneralContextState {
 	ipData: any;
 	timeData: any;
 	isModalOpen: boolean;
+	timezoneData: any;
 }
 
 const initialState: GeneralContextState = {
@@ -14,6 +15,7 @@ const initialState: GeneralContextState = {
 	ipData: null,
 	timeData: null,
 	isModalOpen: false,
+	timezoneData: null,
 };
 
 type ContextHook = () => {

@@ -13,6 +13,7 @@ export const reducer: ReducerType = (state, action) => {
 				quote: action.payload.quotesData,
 				ipData: action.payload.geolocationData,
 				timeData: action.payload.timeData,
+				timezoneData: action.payload.timezoneData,
 			};
 		case ActionTypes.FETCH_NEW_QUOTE:
 			return {

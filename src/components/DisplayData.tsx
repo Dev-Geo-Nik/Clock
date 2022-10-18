@@ -7,10 +7,9 @@ import { ActionTypes } from "../context/Actions";
 interface Props {
 	isDayTime: boolean | null;
 	ipData: any;
-	timeData: any;
 }
 
-const DisplayData: React.FC<Props> = ({ isDayTime, ipData, timeData }) => {
+const DisplayData: React.FC<Props> = ({ isDayTime, ipData }) => {
 	const {
 		state: { isModalOpen },
 		dispatch,
